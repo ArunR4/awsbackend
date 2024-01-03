@@ -30,7 +30,6 @@ const upload = multer({
         acl: "public-read",
         bucket: BUCKET,
         key: function (req, file, cb) {
-            console.log(file);
             cb(null, file.originalname)
         }
     })
